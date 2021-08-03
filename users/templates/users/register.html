@@ -5,8 +5,8 @@
 <form method="POST">
     {% csrf_token %}
     <fieldset class='form-group'>
-        <legend 'border-botto mb-4'>Jo</legend>
-        {{form}}
+        <legend 'border-botto mb-4'>Join Today</legend>
+        {{form.as_p}}
     </fieldset>
     <div class='form-group'>
         <button class="btn btn-ouutline-info" type='submit'>Sign Up</button>
