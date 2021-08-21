@@ -16,14 +16,14 @@ class postlistview(ListView):           #Example of class based views.
     template_name = 'blog/home.html'   # <app>/<model>_<viewpoint>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
-    paginate_by = 2            #number of post objects which should be shown per page
+    paginate_by = 4            #number of post objects which should be shown per page
 
 
 class userpostlistview(ListView):           #Example of class based views.
     model= Post
     template_name = 'blog/user-posts.html'   # <app>/<model>_<viewpoint>.html
     context_object_name = 'posts'
-    paginate_by = 2            #number of post objects which should be shown per page
+    paginate_by = 4            #number of post objects which should be shown per page
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
